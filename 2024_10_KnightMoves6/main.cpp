@@ -45,6 +45,7 @@ const int8_t TRIP_LENGTH_MAX = BOARD_SIZE * BOARD_SIZE - 1;
 // ************************************************************************************
 
 unordered_map<size_t, vector<pair<int8_t, int8_t>>> valid_trips;
+
 mutex valid_trips_mutex;
 mutex print_mutex;
 
