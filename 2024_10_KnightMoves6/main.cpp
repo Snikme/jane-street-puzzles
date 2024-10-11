@@ -146,9 +146,12 @@ private:
 
 // ************************************************************************************
 
-void printResult(const int8_t& a, const int8_t& b, const int8_t& c, const vector<pair<int8_t, int8_t>>& trip1, const vector<pair<int8_t, int8_t>>& trip2) {
+void printResult(const int8_t& a, const int8_t& b, const int8_t& c, vector<pair<int8_t, int8_t>>& trip1, vector<pair<int8_t, int8_t>>& trip2) {
     cout << "I found it!" << endl;
     cout << static_cast<int>(a) << "," << static_cast<int>(b) << "," << static_cast<int>(c) << ",";
+    
+    if(trip1[0] == TRIP_A6F1_START) swap(trip1, trip2);
+    
     printTrip(trip1);
     cout << ",";
     printTrip(trip2);
